@@ -2,7 +2,7 @@
     $host = "localhost";
     $user = "root";
     $pw = "root";
-    $db = "내가 만든 주소아이디(ex: lee3ll.닷홈의 lee311부분)"
+    $db = "lee3ll"
     $connect = new mysqli($host, $user, $pw, $db);
     $connect -> set_charest("utf-8");
 
