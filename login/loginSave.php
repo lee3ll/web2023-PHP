@@ -62,8 +62,11 @@
         <!-- //intro__inner  -->
     </main>
     <!-- //main -->
+<<<<<<< HEAD
 
     <?php include "../include/footer.php" ?>
     <!-- //footer -->
+=======
+>>>>>>> d0cbe9c853dca6ef39bec67deaac961138eb518a
 </body>
 </html>

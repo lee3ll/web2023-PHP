@@ -2,9 +2,15 @@
     include "../connect/connect.php";
     include "../connect/session.php";
 
+<<<<<<< HEAD
     echo "<pre>";
     var_dump($_SESSION);
     echo "</pre>";
+=======
+    // echo "<pre>";
+    // var_dump($_SESSION);
+    // echo "</pre>";
+>>>>>>> d0cbe9c853dca6ef39bec67deaac961138eb518a
 ?>
 
 <!DOCTYPE html>
