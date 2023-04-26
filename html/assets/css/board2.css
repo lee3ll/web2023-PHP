@@ -58,6 +58,9 @@
     padding: 15px 15px;
     border-bottom: 1px solid var(--color__black);
 }
+.board__table table tr:hover{
+    background-color: var(--bg__gray2);
+}
 .board__table table td a:hover {
     text-decoration: underline;
     text-underline-position: under;
@@ -75,10 +78,14 @@
     padding: 10px 13px;
     margin-left: -1px;
 }
+.board__pages li a:hover {
+    background-color: var(--bg__gray2);
+}
 .board__pages li.active a {
     background-color: var(--color__black);
     color: var(--color__white);
 }
+
 .board__view{
     margin-top: 40px;
     border-top: 2px solid var(--color__black);
