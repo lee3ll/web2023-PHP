@@ -38,6 +38,7 @@
 .boardinfo span em{
     color: red;
 }
+
 .boardinfo > div {
     display: flex;
     justify-content: space-between;

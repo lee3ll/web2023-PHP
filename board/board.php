@@ -1,6 +1,14 @@
 <?php
     include "../connect/connect.php";
     include "../connect/session.php";
+
+    //총 페이지
+    $sql = "SELECT count(boardID) FROM board";
+    $result = $connect -> query($sql);
+
+    $boardTotalCount = $result -> fetch_array(MYSQLI_ASSOC);
+    $boardTotalCount = $boardTotalCount['count(boardID)'];
+
 ?>
 <!DOCTYPE html>
 <html lang="ko">
@@ -32,20 +40,20 @@
         <div class="board__inner">
             <div class="board__search">
                 <div class="left">
-                    *총<em>1111</em>건의 게시물이 등록되어 있습니다.
+                    *총<em><?=$boardTotalCount?></em>건의 게시물이 등록되어 있습니다.
                 </div>
                 <div class="right">
-                    <form action="#" name="#" method="post">
+                    <form action="boardSearch.php" name="boardSearch" method="get">
                         <fieldset>
                             <legend class="blind">게시판 검색 영역</legend>
-                            <input type="search" placeholder="검색어를 입력해주세요!">
-                            <select name="#" id="#">
+                            <input type="search" name="searchKeyword" id="searchKeyword" placeholder="검색어를 입력해주세요!" required>
+                            <select name="searchOption" id="searchOption">
                                 <option value="title">제목</option>
                                 <option value="content">내용</option>
                                 <option value="name">등록자</option>
                             </select>
-                            <button type="submit" class="btnstyle3 white">검색</button>
-                            <a href="boardWrite.php" class="btnstyle3">글쓰기</a>
+                            <button type="submit" class="btnStyle3 white">검색</button>
+                            <a href="boardWrite.php" class="btnStyle3">글쓰기</a>
                         </fieldset>
                     </form>
                 </div>
@@ -72,7 +80,7 @@
                         <!-- <tr>
                             <td>1</td>
                             <td><a href="boardView.html">게시판 제목</a></td>
-                            <td>김현빈</td>
+                            <td>이은지</td>
                             <td>2023-04-24</td>
                             <td>100</td>
                         </tr> -->
@@ -114,10 +122,7 @@
 <?php
     //게시글 총 갯수
     //몇 페이지??
-    $sql = "SELECT count(boardID) FROM board";
-    $result = $connect -> query($sql);
-    $boardTotalCount = $result -> fetch_array(MYSQLI_ASSOC);
-    $boardTotalCount = $boardTotalCount['count(boardID)'];
+    
 
     //총 페이지 갯 수
     $boardTotalCount = ceil($boardTotalCount/$viewNum);
