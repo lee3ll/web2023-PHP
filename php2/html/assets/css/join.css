@@ -1,3 +1,11 @@
+body {
+    background-color: #FFF4FE
+    ;
+}
+/* join title */
+.join__title{
+    
+}
 /* join__form */
 .join__inner {
     /* padding: 5% 0; */
@@ -26,7 +34,7 @@
     height: 40px;
     margin-bottom: 25px;
     background-color: #fff;
-    border: 1px solid #7e7e7e;
+    border: 1px solid #F06171;
     border-radius: 5px;
 }
 .join__form div label {
